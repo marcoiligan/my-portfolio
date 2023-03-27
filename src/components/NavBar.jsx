@@ -83,12 +83,12 @@ const NavBar = () => {
         {nav && (
             <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
             {links.map(({id, link}) => (
-                <li key={id} className="px-4 cursor-pointer capitalize py-6 text-4xl">
+                <li key={id} className="px-4 cursor-pointer capitalize py-3 text-2xl">
                     <Link onClick={() => setNav(!nav)} to={link} smooth duration={500}>{link}</Link>
                 </li>
             ))}
             {sociallinks.map(({id,child,href,download}) =>
-                <li key={id} className="px-4 cursor-pointer capitalize py-6 text-4xl">
+                <li key={id} className="cursor-pointer capitalize py-3 text-2xl">
                 <a href={href} rel="noopener noreferrer" className="flex justify-between items-center" download={download} target="_blank">
                     {child}
                     </a>
