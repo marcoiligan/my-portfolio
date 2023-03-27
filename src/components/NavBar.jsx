@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import {FaBars, FaTimes} from 'react-icons/fa'
 import {Link} from 'react-scroll'
+import {FaGithub, FaLinkedin} from 'react-icons/fa';
+import {HiOutlineMail} from 'react-icons/hi'
+import {BsFillPersonLinesFill} from 'react-icons/bs'
 
 const NavBar = () => {
     const [nav, setNav] = useState(false);
@@ -27,6 +30,40 @@ const NavBar = () => {
             link: 'contact'
         },
     ];
+
+    const sociallinks = [
+        {
+            id:1,
+            child: (
+                <>
+                    LinkedIn <FaLinkedin size={30}/>
+                </>
+            ),
+            href: 'https://www.linkedin.com/in/marco-iligan-055648188/',
+            style: 'rounded-tr-md'
+        },
+        {
+            id:2,
+            child: (
+                <>
+                    Github <FaGithub size={30}/>
+                </>
+            ),
+            href: 'https://github.com/marcoiligan'
+        },
+        {
+            id:3,
+            child: (
+                <>
+                    Resume <BsFillPersonLinesFill size={30}/>
+                </>
+            ),
+            href: '/miligan_resume.pdf',
+            style: 'rounded-br-md',
+            download: true,
+        },
+    ];
+
   return (
     <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed">
         <div> 
@@ -51,7 +88,14 @@ const NavBar = () => {
                     <Link onClick={() => setNav(!nav)} to={link} smooth duration={500}>{link}</Link>
                 </li>
             ))}
-        </ul>
+            {sociallinks.map(({id,child,href,download}) =>
+                <li key={id} className="px-4 cursor-pointer capitalize py-6 text-4xl">
+                <a href={href} rel="noopener noreferrer" className="flex justify-between items-center" download={download} target="_blank">
+                    {child}
+                    </a>
+                </li>
+            )}
+            </ul>
         )}
 
         
