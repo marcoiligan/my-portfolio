@@ -11,7 +11,7 @@ const Portfolio = () => {
             id:1,
             src: devSearch,
             demo:"",
-            code:""
+            code:"https://github.com/marcoiligan/dev-socialnetwork"
         },
         {
             id:2,
@@ -22,20 +22,20 @@ const Portfolio = () => {
         {
             id:3,
             src: pong,
-            demo:"",
-            code:""
+            demo:"https://replit.com/@MarcoIligan/Pong",
+            code:"https://github.com/marcoiligan/Pong"
         },
         {
             id:4,
             src: rewordle,
-            demo:"",
-            code:""
+            demo:"https://rwordle-clone.pages.dev/",
+            code:"https://github.com/marcoiligan/rwordle"
         },
         {
             id:5,
             src: tetris,
-            demo:"",
-            code:""
+            demo:"https://replit.com/@MarcoIligan/Tetris",
+            code:"https://github.com/marcoiligan/Tetris"
         },
     ]
 
@@ -47,12 +47,16 @@ const Portfolio = () => {
                 <p className="py-6">Check out some of my work right here</p>
             </div>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-            {portfolios.map(({id,src}) => 
+            {portfolios.map(({id,src,demo,code}) => 
                 <div id={id} className="shadow-md shadow-gray-600 rounder-lg">
                     <img src={src} alt="" className="rounded-md duration-200 hover:scale-105"/>
                     <div className="flex items-center justify-center">
-                        <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">Demo</button>
-                        <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">Code</button>
+                        {demo ? 
+                        <a href={demo} rel="noreferrer" className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105" target="_blank">Demo</a> : <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105" >Demo</button>
+                        }
+                        {code ?
+                        <a href={code} rel="noreferrer" className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105" target="_blank">Code</a> : <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105" >Code</button>
+                        }
                     </div>
                 </div>
             )}
