@@ -2,8 +2,13 @@ import React from 'react';
 import profile from '../assets/Marco-Profile.jpeg';
 import {MdOutlineKeyboardArrowRight} from 'react-icons/md';
 import {Link} from 'react-scroll';
+import {useTypewriter, Cursor, Typewriter} from 'react-simple-typewriter';
 
 const Home = () => {
+    const {text} = useTypewriter({
+        words: ['Application Developer','Developer'],
+        loop: {},
+    });
   return (
     <div name="home" className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800">
         <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
@@ -14,9 +19,17 @@ const Home = () => {
                 <h2 className="text-4xl sm:text-7xl font-bold text-white w-full whitespace-nowrap">
                     Marco C. Iligan
                 </h2>
-                <h3 className="text-2xl sm:text-5xl font-bold text-white w-fit whitespace-nowrap">
-                    <span className=" text-green-500">Application Developer</span>
-                </h3>
+                <h4 className="text-2xl sm:text-4xl font-bold text-green-500 w-fit whitespace-nowrap">
+                    <Typewriter
+                    words={['Application Developer']}
+                    loop
+                    cursor
+                    cursorStyle='_'
+                    typeSpeed={70}
+                    deleteSpeed={50}
+                    delaySpeed={1000}
+                    />
+                </h4>
                 <p className="text-gray-500 py-4 max-w-md ">
                 I have 4 years of experience building and designing softwares.
                 The majority of my experience lies in backend development using technologies like Spring and Django

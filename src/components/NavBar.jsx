@@ -66,7 +66,7 @@ const NavBar = () => {
   return (
     <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed">
         <div> 
-            <h1 className="text-xl font-bold ml-2">Portfolio.</h1>
+            <Link to={'home'} smooth duration={500} className="text-xl cursor-pointer font-bold ml-2">Portfolio.</Link>
         </div>
         
         <ul className="hidden md:flex">
@@ -81,14 +81,16 @@ const NavBar = () => {
         </div>
         
         {nav && (
-            <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
+            // <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
+            <ul className="fixed top-1 left-0 w-[60%] h-full border-r bg-gradient-to-b from-black to-gray-800 text-gray-500">
+                <div className="p-4 text-xl font-bold ml-2 text-white">Portfolio.</div>
             {links.map(({id, link}) => (
-                <li key={id} className="px-4 cursor-pointer capitalize py-3 text-2xl">
+                <li key={id} className="px-4 border-b border-gray-600 cursor-pointer capitalize py-3 text-2xl">
                     <Link onClick={() => setNav(!nav)} to={link} smooth duration={500}>{link}</Link>
                 </li>
             ))}
             {sociallinks.map(({id,child,href,download}) =>
-                <li key={id} className="cursor-pointer capitalize py-3 text-2xl">
+                <li key={id} className="px-4 border-b border-gray-600 cursor-pointer capitalize py-3 text-2xl">
                 <a href={href} rel="noopener noreferrer" className="flex justify-between items-center" download={download} target="_blank">
                     {child}
                     </a>
