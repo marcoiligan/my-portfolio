@@ -2,13 +2,9 @@ import React from 'react';
 import profile from '../assets/Marco-Profile.jpeg';
 import {MdOutlineKeyboardArrowRight} from 'react-icons/md';
 import {Link} from 'react-scroll';
-import {useTypewriter, Cursor, Typewriter} from 'react-simple-typewriter';
+import {Typewriter} from 'react-simple-typewriter';
 
 const Home = () => {
-    const {text} = useTypewriter({
-        words: ['Application Developer','Developer'],
-        loop: {},
-    });
   return (
     <div name="home" className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800">
         <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
@@ -24,7 +20,6 @@ const Home = () => {
                     words={['Application Developer']}
                     loop
                     cursor
-                    cursorStyle='_'
                     typeSpeed={70}
                     deleteSpeed={50}
                     delaySpeed={1000}
