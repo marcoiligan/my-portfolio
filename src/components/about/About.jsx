@@ -9,12 +9,12 @@ const About = () => {
                 <p className="py-6">Check out my background right here</p>
             </div>
             <p className="text-xl mt-20">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium sint magnam aut soluta. Quidem iure officiis nulla consectetur nemo in modi dolor minima, ducimus aliquid mollitia sed voluptate atque labore? Soluta deserunt velit repudiandae assumenda, facere, earum, quisquam laudantium qui tenetur incidunt eveniet facilis. Dicta repellendus perspiciatis explicabo voluptatibus esse!
+                With four years of hands-on industry experience, I am a versatile Application Developer specializing in backend development. My expertise in Java and Spring Boot has allowed me to architect and build scalable, high-performance software solutions that meet and exceed client expectations. As a Certified AWS Solutions Architect Associate, I have a solid understanding of cloud-based infrastructure. I am dedicated to my professional growth and am open to mentorship opportunities to broaden my skill set and stay current with emerging technologies.
             </p>
             <br />
 
             <p className="text-xl">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus ullam aspernatur facere voluptates sint temporibus. Atque, dolores quos. Culpa natus suscipit optio odio quibusdam voluptatum deleniti eum, rerum modi expedita beatae maiores distinctio dolorem. Totam ipsum magnam ad incidunt delectus accusantium maxime in, quos eligendi, animi minus alias praesentium inventore!
+                One of my standout abilities is automation using Python. Leveraging Python scripting, I have optimized workflows and enhanced operational efficiency, leading to substantial time and cost savings across various projects. My commitment to excellence extends beyond technical proficiency; I thrive in collaborative environments, am an effective communicator, and actively contribute to cross-functional teams. Eager to embrace new challenges, I am poised to apply my experience, AWS certification, and enthusiasm for learning to drive innovation, contribute to the success of forward-thinking organizations, and facilitate continuous growth within my team.
             </p>
         </div>
     </div>
